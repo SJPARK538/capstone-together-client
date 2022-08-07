@@ -1,0 +1,5 @@
+//for text properties
+@mixin text($size, $line-height) {
+    font-size: $size;
+    line-height: $line-height;
+  }

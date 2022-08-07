@@ -1,0 +1,13 @@
+@use "./fonts" as *;
+
+* {
+    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
