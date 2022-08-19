@@ -1,0 +1,33 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/breakpoints" as *;
+
+
+.header {
+    &__logo-container{
+        display: none;
+    }
+
+    background-color: red;
+
+
+
+   
+}
+
+@include tablet {
+   .header{
+    &__logo-container{
+        display: flex;
+    }
+   }
+    
+}
+
+@include desktop {
+    .header{
+        &__logo-container{
+            display: flex;
+        }
+       }
+}

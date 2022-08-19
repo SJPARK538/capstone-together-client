@@ -1,11 +1,17 @@
 import React from 'react';
-import Login from '../../components/Login/Login';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 
 class Home extends React.Component {
-  render() {
-    return <>
-    <Login/></>;
+  render(){
+    return(
+      <>
+      <Header />
+      <div>hello</div>
+      <Footer />
+      </>
+    )
   }
 }
 
