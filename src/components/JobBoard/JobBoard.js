@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './JobBoard.scss';
+import Header from '../Header/Header';
 
 class JobBoard extends React.Component {
     state = {
@@ -20,6 +21,7 @@ class JobBoard extends React.Component {
     render() {
         return (
         <>
+        <Header />
         {this.state.currentJobboard.map((joblist) => (
             <>
             <div>THIS IS JOBBOARD COMPONENT</div>

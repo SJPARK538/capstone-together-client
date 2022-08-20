@@ -10,11 +10,10 @@ class Home extends React.Component {
   render(){
     return(
       <>
-      <Header />
-      <Switch>
-          <Route path="/" component={Main} />
-      </Switch>
-      <Footer />
+    <Header />
+        <div>THIS IS HOMEPAGE</div>
+    
+    <Footer />
       </>
     )
   }
