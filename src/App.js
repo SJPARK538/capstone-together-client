@@ -3,9 +3,9 @@ import React from 'react';
 import Home from './pages/Home/Home';
 import Login from './components/Login/Login';
 import JobBoard from './components/JobBoard/JobBoard';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Main from './components/Main/Main';
+import JobDetail from './components/JobDetail/JobDetail';
+import JobPosting from './components/JobPosting/JobPosting';
+
 
 
 
@@ -19,7 +19,10 @@ class App extends React.Component {
         <Route exact path="/" >
             {isLoggedIn ? <Home />: <Redirect to="/login" /> }
         </Route>
-        <Route path="/job" component={JobBoard} /> 
+        <Route exact path="/job" component={JobBoard} /> 
+        <Route exact path="/job/:id" component={JobDetail} />
+        <Route exact path="/job/post" component={JobPosting} />
+        
 
       </Switch>
     </BrowserRouter>

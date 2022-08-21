@@ -19,9 +19,9 @@ class JobBoard extends React.Component {
             this.setState({ currentJobboard: res.data });
         });
     }
- 
 
     render() {
+
         return (
         <>
         <Header />
@@ -29,8 +29,7 @@ class JobBoard extends React.Component {
         <div>This is Job board</div>
         <section className="job__horizontal">
           <div className="job__horizontal-label">
-            <h5 className="job__horizontal-label--title">POST DATE
-            </h5>
+            <h5 className="job__horizontal-label--title">POST DATE</h5>
             <img className="job__sort" src={sortIcon} alt="sort-icon" />
           </div>
           <div className="job__horizontal-label">
