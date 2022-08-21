@@ -21,23 +21,11 @@ class App extends React.Component {
         </Route>
         <Route exact path="/job" component={JobBoard} /> 
         <Route exact path="/job/:id" component={JobDetail} />
-        <Route exact path="/job/post" component={JobPosting} />
+        <Route exact path="/job/add" component={JobPosting} />
         
 
       </Switch>
     </BrowserRouter>
-
-
-
-    // <Router>
-    //   <Route path="/login" component={Login}></Route>  
-    //   <Route exact path="/">
-    //       {isLoggedIn ? <Home />: <Redirect to="/login" /> }
-    //   </Route>
-    //   {/* <Route path="/job" component={JobBoard} /> */}
-    // </Router>
-
-
 
     )
   }
