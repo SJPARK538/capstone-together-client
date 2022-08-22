@@ -1,0 +1,42 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/breakpoints" as *;
+
+
+* {
+    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+}
+
+.footer {
+    border: 1px solid red;
+    background: rgba($primary-main, 0.8);
+    height: auto;
+    
+    &__container {
+        margin: 0 1rem;
+        text-align: center;
+    
+
+        &-content{
+            font-size: 0.6rem;
+            color: $primary-white;
+            font-weight: 500;
+    
+        }
+    }
+}
+
+@include tablet {
+    .footer {
+        &__container {
+
+            &-content{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+

@@ -12,8 +12,8 @@ const Header = () => {
             </div>
             <div className="header__links">
                 <Link to ="/about" className="header__links-item"><div>ABOUT</div></Link>
-                <Link to ="/jobboard" className="header__links-item"><div>JOB BOARD</div></Link>
-                <Link to ="/jobposting" className="header__links-item"><div>JOB POSTING</div></Link>
+                <Link to ="/job" className="header__links-item"><div>JOB BOARD</div></Link>
+                <Link to ="/jobs/add" className="header__links-item"><div>JOB POSTING</div></Link>
                 <Link to ="/myaccount" className="header__links-item"><div>MY ACCOUNT</div></Link>
             </div>
         </header>

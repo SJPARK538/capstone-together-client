@@ -1,0 +1,26 @@
+* {
+  font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+}
+
+.footer {
+  border: 1px solid red;
+  background: rgba(211, 177, 111, 0.8);
+}
+.footer__container {
+  margin: 0 1rem;
+  text-align: center;
+}
+.footer__container-content {
+  font-size: 0.6rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container-content {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */

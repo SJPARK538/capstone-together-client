@@ -16,7 +16,7 @@ class JobDetail extends React.Component{
         .then (res=> {
             const currentJobDetail = res.data;
             this.setState({currentJobDetail})
-            console.log(currentJobDetail)
+            // console.log(currentJobDetail)
         })
     }
     render(){

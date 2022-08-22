@@ -21,7 +21,7 @@ class App extends React.Component {
         </Route>
         <Route exact path="/job" component={JobBoard} /> 
         <Route exact path="/job/:id" component={JobDetail} />
-        <Route exact path="/job/add" component={JobPosting} />
+        <Route exact path="/jobs/add" component={JobPosting} />
         
 
       </Switch>

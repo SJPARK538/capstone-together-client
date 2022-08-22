@@ -6,29 +6,31 @@ import Footer from '../Footer/Footer';
 
 class JobPosting extends React.Component{
     state = {
-        // title: '',
-        // category: '',
-        // region: '',
-        // payType: '',
-        // payRate: '',
-        // postDate: '',
-        // dueData: '',
-        // description: '',
-        newJob:[]
+        title: '',
+        category: '',
+        region: '',
+        payType: '',
+        payRate: '',
+        postDate: '',
+        dueData: '',
+        description: '',
+        
+        // newJob:[]
 
     };
 
-    componentDidMount(){
-        axios.get('http://localhost8080/job/add')
-        .then(res =>{
-            this.setState({
-                newJob:res.data
-            })
-        })
-        // this.newJob();
-    }
+    // componentDidMount(){
+    //     axios.get('http://localhost8080/job/add')
+    //     .then(res =>{
+    //         this.setState({
+    //             newJob:res.data
+    //         })
+    //     })
+    //     // this.newJob();
+    // }
 
     handleSubmit = (e) => {
+        console.log(e)
         e.preventDefault();
         if (
             !e.target.title.value ||
@@ -113,6 +115,8 @@ class JobPosting extends React.Component{
 
                             <label className='post__form-label'>JOB DESCRIPTION</label>
                             <input className='post__form-input' placeholder='Detail Job Description + contact information' name='pay rate'></input>
+
+                            <button type='submit'>button</button>
                         </div>
                     </form>
                 </div>

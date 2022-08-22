@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import Main from '../../components/Main/Main';
-import JobBoard from '../../components/JobBoard/JobBoard';
+import { Link } from "react-router-dom";
+import "./Home.scss";
+import video from "../../assets/videos/video.mp4"
 
 
 class Home extends React.Component {
@@ -11,7 +11,29 @@ class Home extends React.Component {
     return(
       <>
     <Header />
+      <section className='main'>
+        <div className='main__banner'>
+          <div className='main__banner-container'>
+            <div className='main__banner-content'>
+            <video className='main__banner-cotent--video' autoPlay loop muted>
+              <source src = {video} type='video/mp4'/>
+              </video>
+              <h1 className='main__banner-content--title'>TOGETHER</h1>
+              <p className='main__banner-content--description'>Find your part-time job in your region.<br/> You can earn money while you are helping your neighrhood</p>
+            
+            </div>
+          </div>
+        </div>
+        <div className='main__job'>
+          <div className='main__job-container'>
+            <div className='main__job-content'>
+              <Link to="/job" className='main__job-content--link'><div>JOB BOARD</div></Link>
+              <Link to="/jobs/add" className='main__job-content--link'><div>JOB POSTING</div></Link>
 
+            </div>
+          </div>
+        </div>
+      </section>
     
     <Footer />
       </>
