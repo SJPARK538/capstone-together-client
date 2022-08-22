@@ -30,30 +30,30 @@ class JobDetail extends React.Component{
                         <h2 className='job__content-title'>{this.state.currentJobDetail.title}</h2>
                         <div className='job__content-information'>
                             <div className='job__sub-part1'>
-                                <div className='job__sub-part1-left'>
-                                    <div className='job_info-lists'>
+                                <div className='job__sub-part1-section--1'>
+                                    <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>CATEGORY:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.category}</p>
                                     </div>
-                                    <div className='job_info-lists'>
+                                    <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>PAY TYPE:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.payType}</p>
                                     </div>
-                                    <div className='job_info-lists'>
+                                    <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>PAY RATE:</h3>
                                         <p className='job__info-lists--content'>${this.state.currentJobDetail.payRate}</p>
                                     </div>
                                 </div>
-                                <div className='job__sub-part1-right'>
+                                <div className='job__sub-part1-section--2'>
                                     <div className='job_info-lists'>
                                         <h3 className='job__info-lists--label'>REGION:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.region}</p>
                                     </div>
-                                    <div className='job_info-lists'>
+                                    <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>POST DATE:</h3>
                                         <p className='job__info-lists--content'>{new Date(this.state.currentJobDetail.postDate).toLocaleDateString()}</p>
                                     </div>
-                                    <div className='job_info-lists'>
+                                    <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>DUE DATE:</h3>
                                         <p className='job__info-lists--content'>{new Date(this.state.currentJobDetail.dueDate).toLocaleDateString()}</p>
                                     </div>

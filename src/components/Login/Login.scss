@@ -1,3 +1,20 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use "../../styles/partials/breakpoints" as *;
+
+* {
+    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+}
+
+
+
+// @include tablet {
+
+// }
+
+// @include desktop {
+
+// }

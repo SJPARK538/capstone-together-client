@@ -3,6 +3,7 @@ import axios from 'axios';
 import './JobPosting.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import DropdownPay from '../DropdownPay/DropdownPay';
 
 class JobPosting extends React.Component{
     state = {
@@ -14,20 +15,10 @@ class JobPosting extends React.Component{
         postDate: '',
         dueData: '',
         description: '',
-        
-        // newJob:[]
 
     };
 
-    // componentDidMount(){
-    //     axios.get('http://localhost8080/job/add')
-    //     .then(res =>{
-    //         this.setState({
-    //             newJob:res.data
-    //         })
-    //     })
-    //     // this.newJob();
-    // }
+
 
     handleSubmit = (e) => {
         console.log(e)
@@ -64,7 +55,7 @@ class JobPosting extends React.Component{
 
 
     render(){
-        const payTypes = ['Flat', 'Hourly']
+        // const payTypes = ['Flat', 'Hourly']
 
         return(
             <>
@@ -104,11 +95,15 @@ class JobPosting extends React.Component{
                             
 
                             <label className='post__form-label'>PAY TYPE</label>
-                            <select className='post__form-input' options={payTypes} name='pay type'></select>
+                            {/* <select className='post__form-input' options={payTypes} name='pay type'></select> */}
                             <select name="payType" className='post__form-input'>
-                                <option value="flat">Flat</option>
-                                <option value="Hourly">Hourly</option>
+                                {/* <option value="flat">Flat</option>
+                                <option value="Hourly">Hourly</option> */}
+                                 
+                           
                             </select>
+                            <DropdownPay/>
+                         
 
                             <label className='post__form-label'>PAY RATE</label>
                             <input className='post__form-input'  name='payrate'></input>

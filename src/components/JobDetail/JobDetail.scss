@@ -1,0 +1,82 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/breakpoints" as *;
+
+* {
+    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+}
+
+
+.jobdetail {
+    margin:  1rem;
+
+    &__container {
+        background-color: $secondary-slate;
+        padding: 1rem;
+
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
+
+.job{
+    &__content {
+        border: 1px solid red;
+
+        &-title {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+    
+    }
+
+    &__sub-part1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        &-section--1 {
+            display: flex;
+            flex-direction: column;
+        }
+        &-section--2 {
+            display: flex;
+            flex-direction: column;
+            border: solid blue 1px;
+        }
+
+      
+    }
+    &__info-lists {
+        display: flex;
+        gap: 0.5rem;
+
+        &--label {
+            font-size: 0.8rem;
+            
+        }
+
+        &--content {
+            font-size: 0.7rem;
+        }
+    }
+
+
+
+
+}
+
+// @include tablet {
+
+// }
+
+// @include desktop {
+
+// }
