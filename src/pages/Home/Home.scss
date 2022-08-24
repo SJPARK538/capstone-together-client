@@ -36,7 +36,7 @@ video {
         &--title {
             font-size: 2rem;
             color: $primary-main;
-            text-shadow: -1px 0 $primary-white, 0 1px $primary-white, 1px 0 $primary-white, 0 -1px $primary-white;
+            @include textshadow-white;
         }
 
         &--description {

@@ -8,9 +8,9 @@ function DropdownPay() {
   
   return (
     <Dropdown>
-      {/* <Dropdown.Toggle variant="success" id="dropdown-basic">
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
         PAY TYPE
-      </Dropdown.Toggle> */}
+      </Dropdown.Toggle>
 
       <Dropdown.Menu>
         <Dropdown.Item href="#/action-1">Flat</Dropdown.Item>

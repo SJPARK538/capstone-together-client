@@ -45,7 +45,7 @@ class JobDetail extends React.Component{
                                     </div>
                                 </div>
                                 <div className='job__sub-part1-section--2'>
-                                    <div className='job_info-lists'>
+                                    <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>REGION:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.region}</p>
                                     </div>
@@ -60,7 +60,7 @@ class JobDetail extends React.Component{
                                 </div>
                             </div>
                             <div className='job__sub-part2'>
-                                <h2 className='job__sub-part2--label'>Job Description</h2>
+                                <h3 className='job__sub-part2--label'>Job Description</h3>
                                 <p className='job__sub-part2--content'>{this.state.currentJobDetail.description}</p>
                             </div>
                         </div>

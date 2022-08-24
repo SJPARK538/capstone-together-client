@@ -25,8 +25,8 @@ class JobBoard extends React.Component {
         return (
         <>
         <Header />
-        <div className='jobboard'>
-        <div>This is Job board</div>
+        <div className='job'>
+        <h1 className='job__main'>JOB BOARD</h1>
         <section className="job__horizontal">
           <div className="job__horizontal-label">
             <h5 className="job__horizontal-label--title">POST DATE</h5>
@@ -44,12 +44,10 @@ class JobBoard extends React.Component {
             <h5 className="job__horizontal-label--title">PAY TYPE</h5>
             <img className="job__sort" src={sortIcon} alt="sort-icon" />
           </div>
-          <div className="details__horizontal-label">
-            <h5 className="job__horizontal-label--title">DUE DATE</h5>
-          </div>
         </section>
         
         {this.state.currentJobboard.map((joblist) => (
+             <Link to ={`/job/${joblist.id}`}>
             <div className="job__items" key={uuidv4()}>
                 <div className="job__items-detail">
                     <div className="job__items-detail--list">
@@ -57,15 +55,8 @@ class JobBoard extends React.Component {
                         <p className='job__items-postdate'>{new Date(joblist.postDate).toLocaleDateString()}</p>
                     </div>
                     <div className="job__items-detail--list">
-                    <Link to ={`/job/${joblist.id}`}>
                         <h5 className="job__items-title">TITLE</h5>
-                        <p className='job__items-title'>{joblist.title}</p>
-                        <img
-                        className="inventory__items-arrow"
-                        src={rightArrow}
-                        alt="sort-icon"
-                        />
-                    </Link>
+                        <p className='job__items-jobtitle'>{joblist.title}</p>
                     </div>
                     <div className="job__items-detail--list">
                         <h5 className="job__items-title">CATEGORY</h5>
@@ -77,6 +68,7 @@ class JobBoard extends React.Component {
                     </div>
                 </div>
             </div>
+            </Link>
         ))}
         </div>
         <Footer />
