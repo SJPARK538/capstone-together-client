@@ -7,6 +7,49 @@
     text-decoration: none;
     list-style: none;
     margin: 0;
+    box-sizing: border-box;
+}
+
+.img{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.login {
+    &-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    &-form {
+        width: 22.5rem;
+
+        img {
+            height: 1rem;
+        }
+    }
+    
+}
+
+.btn {
+    display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
 }
 
 
