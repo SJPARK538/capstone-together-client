@@ -12,32 +12,21 @@
 .header {
     margin: 0 auto;
     width: 100%;
-    background-color: rgba($primary-main, 0.8);
+    background-color: $primary-white;
     text-align: center;
-    height: 9.5rem;
-
+    height: 4.5rem;
+    
+    &__links {
+        display: none;
+    }
     &__logo-img {
-        width: 100%;
-        height: 3.5rem;
+        width: 40%;
+        height: 2.5rem;
+        margin-top: 1rem;
+
 
     }
-        &__links {
-            display: flex;  
-            flex-direction: column;
 
-            &-item {
-                font-size: 0.7rem;
-                color: $primary-white;
-                line-height: 1.25rem;
-                font-weight: 600;
-
-                &:hover {
-                    background-color: $primary-white;
-                    color:$primary-main;
-                    border-radius: 1.25em;
-                }
-            }
-        }
     }
 
 @include tablet {
@@ -54,14 +43,33 @@
 
         &__logo-img{
         margin: 0 1rem;
-        height: 2rem;    
+        height: 2rem;  
+        width: 100%;  
         }
-    
+
+
         &__links {
-        flex-direction: row;
-        align-items:center;
-        justify-content: space-around;
-        width: 50%;
+            display: flex;  
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+
+            &-item {
+                font-size: 0.7rem;
+                color: $primary-main;
+                line-height: 1.25rem;
+                font-weight: 600;
+                padding: 0.5rem 1rem;
+                
+
+                &:hover {
+                    background-color: $primary-main;   
+                    color:$primary-white;
+                    border-radius: 1.25em;
+                    border: solid 1px $primary-main
+                }
+            }
         }
     }
 }
@@ -73,7 +81,7 @@
         justify-content: space-between;
         
         &__logo-img {
-            width: 20vw;
+            width: 10vw;
             margin: 0 2rem;
             height: 2.5rem;
         }

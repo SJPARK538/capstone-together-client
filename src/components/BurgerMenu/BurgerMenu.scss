@@ -1,0 +1,67 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/breakpoints" as *;
+
+
+.bm-burger-button {
+    position: fixed;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 2.2rem;
+    top: 1.8rem;
+    opacity: 1;
+  }
+  
+  .bm-burger-bars {
+    background: $primary-main;
+  }
+  
+  /* .bm-menu-wrap {
+    visibility: hidden;
+  }
+  
+  .bm-menu-wrap.open {
+    visibility: visible;
+  } */
+
+
+  .bm-cross-button {
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  .bm-cross {
+    background: #bdc3c7;
+    
+  }
+  
+  .bm-menu {
+    background:rgba($primary-main, 0.8);
+    padding: 0;
+    font-size: 1rem;
+    height: 50%;
+  
+  }
+
+  
+  .bm-item-list {
+    padding: 0.5rem;
+  }
+  
+  .bm-item {
+    display: flex;
+    color: $primary-white;
+  }
+
+    
+  
+  @include tablet {
+    .bm-burger-bars{
+        display: none;
+    }
+  }
+  @include desktop {
+    .bm-burger-bars{
+        display: none;
+    }
+  }

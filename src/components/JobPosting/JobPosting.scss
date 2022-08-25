@@ -9,12 +9,145 @@
     margin: 0;
 }
 
+.post {
+    background-color: rgba($primary-main,0.8);
 
+    &__title {
+        text-align: center;
+        padding:1rem;
+        color: $primary-white;
+        font-size: 1.3rem;
+    }
+    &__form {
+        margin: 0 1rem;
+        
+    
+        &-container {
+            background-color: $primary-white;
+            color: $primary-main;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        };
 
-// @include tablet {
+        &-label {
+            font-size: 0.6875rem;
+            line-height: 1rem;
+            margin: 0;
+        }
 
-// }
+        &-input {
+            outline: none;
+            height: 1.90rem;
+            padding: 0 1rem;
+            font-size: 0.6875rem;
+            margin: 0.25rem 0 0.8rem;
+            border-radius: 1.25rem;
+            border: 0.063rem solid $primary-main;
 
-// @include desktop {
+            &--textarea{
+                height: 20vh;
+            }
 
-// }
+            &:focus {
+                border: 1px solid red;
+            }
+        }
+        &-button {
+            color: $primary-white;
+            background-color: rgba($primary-main,0.8);
+            border-radius: 1.25rem;
+            height: 1.9rem;
+            font-size:1rem;
+
+            &:hover {
+                color: rgba($primary-main,0.8);
+                background-color: white;
+                border: 1px solid $primary-main
+            }
+        }
+    }
+}
+
+@include tablet {
+    .post {
+
+        &__title {
+            padding:2rem;
+              font-size: 2rem;
+        }
+        &__form {
+            margin: 0 2rem;
+            
+        
+            &-container {
+                padding: 1rem;
+            };
+    
+            &-label {
+                font-size: 0.85rem;
+            }
+    
+            &-input {
+                height: 2rem;
+                font-size: 0.85rem;
+
+    
+                &--textarea{
+                    height: 30vh;
+                }
+            }
+
+            &-button {
+                height: 2rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .post {
+
+        &__title {
+            padding:3rem;
+              font-size: 3rem;
+        }
+        &__form {
+            margin: 0 3rem;
+            
+
+            &-container {
+                padding: 2rem;
+            };
+    
+            &-label {
+                font-size: 1rem;
+            }
+    
+            &-input {
+                height: 2.5rem;
+                font-size: 1rem;
+
+    
+                &--textarea{
+                    height: 35vh;
+                }
+            }
+
+            &-button-container{
+                display: flex;
+                flex-direction: row-reverse;
+ 
+            }
+        
+            &-button {
+                height: 3rem;
+                width: 20vw;
+                font-size: 1.5rem;
+            }
+            
+        }
+
+    }
+}

@@ -3,12 +3,14 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/images/logo.png"
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = () => {
     return (
         <header className="header">
             <div className="header__logo-container">
                 <Link to ='/' className="header__logo"><img src={logo} className="header__logo-img"></img></Link>
+                <BurgerMenu /> 
             </div>
             <div className="header__links">
                 <Link to ="/about" className="header__links-item"><div>ABOUT</div></Link>
@@ -16,6 +18,7 @@ const Header = () => {
                 <Link to ="/jobs/add" className="header__links-item"><div>JOB POSTING</div></Link>
                 <Link to ="/myaccount" className="header__links-item"><div>MY ACCOUNT</div></Link>
             </div>
+            
         </header>
     )
 }
