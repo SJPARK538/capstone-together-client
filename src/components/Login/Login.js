@@ -28,6 +28,7 @@ class Login extends React.Component {
                 <form className="login-form">
                     <img alt ="Together logo"src ={logo} className="login-form__img"></img>
                     <h2 className="login-form__title">JOIN US</h2>
+                    <div className="login__box">
                     <div className="login__box-one">
                         <div className="input-content">
                             <div className="input-content__box">
@@ -45,6 +46,7 @@ class Login extends React.Component {
                             </div>
                             <input type="password" className="input-content--value" placeholder="Password"></input>
                         </div>
+                    </div>
                     </div>
                     <Link to ="/register" href="#" className="input-content--link">REGISTER</Link>
                     <button className="btn" type="submit">SUBMIT</button>
