@@ -11,8 +11,7 @@
 }
 
 .footer {
-    border: 1px solid red;
-    background: rgba($primary-main, 0.8);
+    background: $primary-white;
     height: auto;
     
     &__container {
@@ -21,8 +20,8 @@
     
 
         &-content{
-            font-size: 0.6rem;
-            color: $primary-white;
+            font-size: 0.8rem;
+            color: $primary-main;
             font-weight: 500;
     
         }
@@ -34,7 +33,7 @@
         &__container {
 
             &-content{
-                font-size: 0.8rem;
+                font-size: 1rem;
             }
         }
     }

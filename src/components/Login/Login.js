@@ -4,44 +4,46 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./Login.scss";
 import loginpeople from "../../assets/icons/people-login.svg"
-import lock from "../../assets/icons/lock.svg"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHome } from "@fortawesome/free-solid-svg-icons";
-// import '../Fontawesome/Fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+
+
 
 class Login extends React.Component {
 
    
     render(){
-        // const icon = <FontAwesomeIcon icon={faHome} />
+        const iconEmail = <FontAwesomeIcon icon={faEnvelope} />
+        const iconLock = <FontAwesomeIcon icon={faLock} />
+
         return(
             <>
-            <div className="logo-container">
+            <div className="logo__photo">
                 {/* <Link to ="/" className="header__logo"><img alt ="Together logo"src ={logo}></img></Link> */}
             </div>
 
-            <div className="login-container">
+            <div className="login__container">
                 
                 <form className="login-form">
-                    <img alt ="Together logo"src ={logo}></img>
-                    <h2 className="login-form__tile">JOIN US</h2>
-                    <div className="input__box-one">
-                        <div className="input__box-one-container">
-                            <img alt ="people login" src={loginpeople}></img>
-                        </div>
-                    
+                    <img alt ="Together logo"src ={logo} className="login-form__img"></img>
+                    <h2 className="login-form__title">JOIN US</h2>
+                    <div className="login__box-one">
                         <div className="input-content">
-                            <h5 className="input-content--username">Username</h5>
-                            <input type ="email" className="input" placeholder="email address"></input>
+                            <div className="input-content__box">
+                                <i className="icon">{iconEmail}</i>
+                                <h5 className="input-content--label">EMAIL</h5>
+                            </div>
+                            <input type ="email" className="input-content--value" placeholder="email address"></input>
                         </div>
                     </div>
-                    <div className="input__box-two">
-                        <div className="input__box-two-container">
-                            <img alt ="lock img" src={lock}></img>
-                        </div>
+                    <div className="login__box-two">
                         <div className="input-content">
-                            <h5 className="input-content--password">Password</h5>
-                            <input type="password" placeholder="Password"></input>
+                            <div className="input-content__box">
+                                <i className="icon">{iconLock}</i>
+                                <h5 className="input-content--label">PASSWORD</h5>
+                            </div>
+                            <input type="password" className="input-content--value" placeholder="Password"></input>
                         </div>
                     </div>
                     <Link to ="/register" href="#">REGISTER</Link>

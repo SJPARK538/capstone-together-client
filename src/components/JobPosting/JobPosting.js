@@ -72,8 +72,6 @@ class JobPosting extends React.Component{
             description: e.target.jobdescription.value,
             postDate: e.target.postDate.value,
             dueDate: e.target.postDate.value
-            // postDate: Date(e.target.postDate.value).toUTCString(),
-            // dueDate: Date.parse(e.target.dueDate.value)
         })
         .then(res=>{
             console.log(res);

@@ -16,6 +16,9 @@
     background: $primary-main;
   }
   
+  #bm-menu-wrap{
+    height:80%;
+  }
   /* .bm-menu-wrap {
     visibility: hidden;
   }
@@ -39,7 +42,7 @@
     background:rgba($primary-main, 0.8);
     padding: 0;
     font-size: 1rem;
-    height: 50%;
+    height: 50% !important;
   
   }
 
