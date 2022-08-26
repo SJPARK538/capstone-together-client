@@ -7,7 +7,7 @@ import loginpeople from "../../assets/icons/people-login.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-
+import bg from "../../assets/images/bg-together.jpg"
 
 
 class Login extends React.Component {
@@ -18,9 +18,9 @@ class Login extends React.Component {
         const iconLock = <FontAwesomeIcon icon={faLock} />
 
         return(
-            <>
-            <div className="logo__photo">
-                {/* <Link to ="/" className="header__logo"><img alt ="Together logo"src ={logo}></img></Link> */}
+            <div className="login">
+            <div className="login__photo">
+               <img className="login__photo-together" src={bg}></img>
             </div>
 
             <div className="login__container">
@@ -46,7 +46,7 @@ class Login extends React.Component {
                             <input type="password" className="input-content--value" placeholder="Password"></input>
                         </div>
                     </div>
-                    <Link to ="/register" href="#">REGISTER</Link>
+                    <Link to ="/register" href="#" className="input-content--link">REGISTER</Link>
                     <button className="btn" type="submit">SUBMIT</button>
                 </form>
 {/* 
@@ -61,7 +61,7 @@ class Login extends React.Component {
                 </div> */}
            
         </div>
-        </>
+        </div>
     )
     }
 }
