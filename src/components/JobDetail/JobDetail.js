@@ -16,7 +16,6 @@ class JobDetail extends React.Component{
         .then (res=> {
             const currentJobDetail = res.data;
             this.setState({currentJobDetail})
-            // console.log(currentJobDetail)
         })
     }
     render(){
@@ -32,7 +31,7 @@ class JobDetail extends React.Component{
                             <div className='job__sub-part1'>
                                 <div className='job__sub-part1-section--1'>
                                     <div className='job__info-lists'>
-                                        <h3 className='job__info-lists--label'>CATEGORY:</h3>
+                                        <h3 className='job__info-lists--label'>Category:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.category}</p>
                                     </div>
                                     <div className='job__info-lists'>

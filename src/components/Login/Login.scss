@@ -47,7 +47,6 @@
         border-radius: 1.25rem; 
         padding: 0 0.5rem 1rem 0.5rem;
         border: 0.1rem solid rgba($primary-main, 0.8)
-        // box-shadow: 0.25rem 0.3rem 0.5rem 0.3rem rgba($primary-main, 0.8)
     }
     &__box-one, &__box-two{
 
@@ -88,10 +87,11 @@
         margin-top: 1rem;
         width: 80vw;
         text-align: right;
+        
 
 
         &:hover{
-            color: $primary-white;
+            color: #9E805B;
             @include textshadow-white;
         }
     }
@@ -100,7 +100,7 @@
 
 .btn {
     display: block;
-	width: 80%;
+	width: 60%;
 	height: 3rem;
 	border-radius: 1.25rem;
 	outline: none;
@@ -181,17 +181,13 @@
             text-align: right;
             width: 40vw;
     
-            &:hover{
-                color: $primary-white;
-
-            }
         }
     
     }
     
     .btn {
         display: block;
-        width: 80%;
+        width: 60%;
         height: 3rem;
         border-radius: 1.25rem;
         outline: none;
