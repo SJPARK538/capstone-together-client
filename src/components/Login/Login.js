@@ -7,7 +7,7 @@ import loginpeople from "../../assets/icons/people-login.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import bg from "../../assets/images/bg-together.jpg"
+import bg from "../../assets/images/login-login__photo.svg"
 
 
 class Login extends React.Component {

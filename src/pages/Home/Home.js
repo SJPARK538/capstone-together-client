@@ -19,7 +19,7 @@ class Home extends React.Component {
               <source src = {video} type='video/mp4'/>
               </video>
               <h1 className='main__banner-content--title'>TOGETHER</h1>
-              <p className='main__banner-content--description'>Find your part-time job in your region.<br/> You can earn money while you are helping your neighrhood</p>
+              <p className='main__banner-content--description'>Meet your Neighbours, Together</p>
             
             </div>
           </div>
