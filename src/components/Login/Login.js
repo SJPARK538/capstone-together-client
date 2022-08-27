@@ -37,7 +37,6 @@ class Login extends React.Component {
             </div>
 
             <div className="login__container">
-                
                 <form className="login-form" onSubmit={this.handleSubmit}>
                     <img alt ="Together logo"src ={logo} className="login-form__img"></img>
                     <h2 className="login-form__title">JOIN US</h2>
