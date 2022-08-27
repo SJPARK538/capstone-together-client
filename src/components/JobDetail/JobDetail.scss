@@ -66,14 +66,14 @@ p {
 
         &--label {
             width: 50%;
-            text-align: center;
+            text-align: left;
             font-size: 0.8rem;
 
         }
 
         &--content {
             width: 50%;
-            text-align: center;
+            text-align: right;
             text-transform: capitalize;
             font-size: 0.685rem;
         }
@@ -111,17 +111,40 @@ p {
         
         &__content {
 
+            &-information {
+                display: flex;
+                flex-direction: column;
+            }
+
             &-title {
                 font-size: 1.2rem;
                 margin: 1rem 0;
                 padding-bottom: 1rem;
-            }
+            }            
+        }
+        
+        &__sub-part1{
+            display: flex;
+            flex-direction: row;
+    
+        }
+
+        &__sub-part1-section {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
         }
 
         &__info-lists {
             display: flex;
             gap: 0.5rem;
             font-size: 0.85rem;
+            align-items: center;
+            width: 70%;
+
+            &--content {
+                text-align: right;
+            }
         }
 
         &__sub-part2{
@@ -139,7 +162,7 @@ p {
 
             &--content {
                 width: 50%;
-                height: 10rem;
+                height: 9rem;
             }
         }
     }
@@ -159,6 +182,7 @@ p {
         &__content {
             padding: 1rem;
 
+
             &-title {
                 font-size: 2rem;
                 margin: 2rem 0;
@@ -166,7 +190,7 @@ p {
         }
 
         &__info-lists {
-   
+
             &--label {
                 font-size: 1.2rem;;
             }
@@ -175,8 +199,6 @@ p {
                 font-size: 1rem;
             }
 
-    
-            
         }
 
         &__sub-part2{

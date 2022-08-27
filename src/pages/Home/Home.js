@@ -9,7 +9,7 @@ import video from "../../assets/videos/video.mp4"
 class Home extends React.Component {
   render(){
     return(
-      <>
+    <>
     <Header />
       <section className='main'>
         <div className='main__banner'>
@@ -29,14 +29,13 @@ class Home extends React.Component {
             <div className='main__job-content'>
               <Link to="/job" className='main__job-content--link'><div>JOB BOARD</div></Link>
               <Link to="/jobs/add" className='main__job-content--link'><div>JOB POSTING</div></Link>
-
             </div>
           </div>
         </div>
       </section>
     
     <Footer />
-      </>
+    </>
     )
   }
 }

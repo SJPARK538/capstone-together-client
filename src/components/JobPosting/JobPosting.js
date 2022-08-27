@@ -3,7 +3,6 @@ import axios from 'axios';
 import './JobPosting.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import DropdownPay from '../DropdownPay/DropdownPay';
 import error from '../../assets/icons/error-24px.svg';
 
 
@@ -16,8 +15,6 @@ class JobPosting extends React.Component{
     PayTypes = ['Flat', 'Hourly']
     CategoryList = ['Cleaning', 'Delivery', 'Assembling', 'Tutoring', 'Helping', 'Caring', 'Shopping', 'Etc']
     
-
-
     validationEmptyFields = () => {
         let messageError = '';
     
@@ -42,26 +39,12 @@ class JobPosting extends React.Component{
             );
         }
     
-      
 
         this.setState({ messageError });
         };
 
     handleSubmit = (e) => {
         e.preventDefault();
-
-        // console.log(this.state.selectedOption)
-
-        console.log(e.target.title.value)
-        console.log(e.target.category.value)
-        console.log(e.target.region.value)
-        console.log(e.target.payType.value)
-
-        console.log(e.target.payRate.value)
-        console.log(e.target.jobdescription.value)
-        console.log(e.target.postDate.value)
-        console.log(e.target.dueDate.value)
-        
         
         axios.post('http://localhost:8080/job', {
             title: e.target.title.value,
@@ -75,11 +58,11 @@ class JobPosting extends React.Component{
         })
         .then(res=>{
             console.log(res);
+            this.props.history.push('/job')
         })
         .catch((err) => {
             console.log(err);
         })
-  
     };
 
     render(){
@@ -99,9 +82,7 @@ class JobPosting extends React.Component{
                             <input type ="date" className='post__form-input' name="dueDate"/>
                             <div>{this.state.messageError}</div>
 
-                            
                             <label className='post__form-label'>TITLE</label>
-                        
                             <input className='post__form-input' placeholder='Short description of a job' name='title'></input>
                             <div>{this.state.messageError}</div>
 
@@ -135,9 +116,7 @@ class JobPosting extends React.Component{
                                 ))}
                             </select>
                             <div>{this.state.messageError}</div>
-                            {/* <DropdownPay/> */}
-                         
-
+        
                             <label className='post__form-label'>PAY RATE</label>
                             <input className='post__form-input'  name='payRate' placeholder='$input amount'></input>
                             <div>{this.state.messageError}</div>
@@ -146,9 +125,7 @@ class JobPosting extends React.Component{
                             <textarea className='post__form-input post__form-input--textarea' type='text'cols="28" rows="6" placeholder='Detail Job Description + contact information' name='jobdescription'></textarea>
                             <div>{this.state.messageError}</div>
 
-
-                                <button type='submit' className='post__form-button'>SUBMIT</button>
-       
+                            <button type='submit' className='post__form-button'>SUBMIT</button>
                         </div>
                     </form>
                 </div>
@@ -156,14 +133,6 @@ class JobPosting extends React.Component{
             </>
         )
     }
-
-
-
-    // render(){
-    //     return(
-    //         <div>job posting page</div>
-    //     )
-    // }
 }
 
 export default JobPosting;

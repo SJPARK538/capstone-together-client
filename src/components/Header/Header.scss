@@ -19,15 +19,13 @@
     &__links {
         display: none;
     }
+
     &__logo-img {
         width: 40%;
         height: 2.5rem;
         margin-top: 1rem;
-
-
     }
-
-    }
+}
 
 @include tablet {
     .header{
@@ -39,11 +37,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: 40%;
         }
 
         &__logo-img{
         margin: 0 1rem;
-        height: 2rem;  
+        height: 3rem;  
         width: 100%;  
         }
 
@@ -53,7 +52,7 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            width: 50%;
+            width: 60%;
 
             &-item {
                 font-size: 0.7rem;

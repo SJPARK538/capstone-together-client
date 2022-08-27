@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import sortIcon from "../../assets/icons/sort-24px.svg"
 import { v4 as uuidv4 } from 'uuid';
-import rightArrow from '../../assets/icons/chevron_right-24px.svg';
+
 
 class JobBoard extends React.Component {
     state = {
@@ -28,26 +28,26 @@ class JobBoard extends React.Component {
         <div className='job'>
         <h1 className='job__main'>JOB BOARD</h1>
         <section className="job__horizontal">
-          <div className="job__horizontal-label">
-            <h5 className="job__horizontal-label--title">POST DATE</h5>
-            <img className="job__sort" src={sortIcon} alt="sort-icon" />
-          </div>
-          <div className="job__horizontal-label">
-            <h5 className="job__horizontal-label--title">TITLE</h5>
-            <img className="job__sort" src={sortIcon} alt="sort-icon" />
-          </div>
-          <div className="job__horizontal-label">
-            <h5 className="job__horizontal-label--title">CATEGORY</h5>
-            <img className="job__sort" src={sortIcon} alt="sort-icon" />
-          </div>
-          <div className="job__horizontal-label">
-            <h5 className="job__horizontal-label--title">PAY TYPE</h5>
-            <img className="job__sort" src={sortIcon} alt="sort-icon" />
-          </div>
+            <div className="job__horizontal-label">
+                <h5 className="job__horizontal-label--title">POST DATE</h5>
+                <img className="job__sort" src={sortIcon} alt="sort-icon" />
+            </div>
+            <div className="job__horizontal-label">
+                <h5 className="job__horizontal-label--title">TITLE</h5>
+                <img className="job__sort" src={sortIcon} alt="sort-icon" />
+            </div>
+            <div className="job__horizontal-label">
+                <h5 className="job__horizontal-label--title">CATEGORY</h5>
+                <img className="job__sort" src={sortIcon} alt="sort-icon" />
+            </div>
+            <div className="job__horizontal-label">
+                <h5 className="job__horizontal-label--title">PAY TYPE</h5>
+                <img className="job__sort" src={sortIcon} alt="sort-icon" />
+            </div>
         </section>
         
         {this.state.currentJobboard.map((joblist) => (
-             <Link to ={`/job/${joblist.id}`}>
+            <Link to ={`/job/${joblist.id}`}>
             <div className="job__items" key={uuidv4()}>
                 <div className="job__items-detail">
                     <div className="job__items-detail--list">

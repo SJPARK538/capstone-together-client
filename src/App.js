@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Switch, Redirect,Router } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import React from 'react';
 import Home from './pages/Home/Home';
 import Login from './components/Login/Login';
@@ -7,11 +7,10 @@ import JobDetail from './components/JobDetail/JobDetail';
 import JobPosting from './components/JobPosting/JobPosting';
 
 
-
-
 class App extends React.Component {
   render(){
-    const isLoggedIn = true
+    const isLoggedIn = true;
+    
     return(
     <BrowserRouter>
       <Switch>
@@ -22,11 +21,8 @@ class App extends React.Component {
         <Route exact path="/job" component={JobBoard} /> 
         <Route exact path="/job/:id" component={JobDetail} />
         <Route exact path="/jobs/add" component={JobPosting} />
-        
-
       </Switch>
     </BrowserRouter>
-
     )
   }
 }

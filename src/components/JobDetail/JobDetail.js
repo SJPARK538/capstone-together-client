@@ -29,7 +29,7 @@ class JobDetail extends React.Component{
                         <h2 className='job__content-title'>{this.state.currentJobDetail.title}</h2>
                         <div className='job__content-information'>
                             <div className='job__sub-part1'>
-                                <div className='job__sub-part1-section--1'>
+                                <div className='job__sub-part1-section'>
                                     <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>Category:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.category}</p>
@@ -43,7 +43,7 @@ class JobDetail extends React.Component{
                                         <p className='job__info-lists--content'>${this.state.currentJobDetail.payRate}</p>
                                     </div>
                                 </div>
-                                <div className='job__sub-part1-section--2'>
+                                <div className='job__sub-part1-section'>
                                     <div className='job__info-lists'>
                                         <h3 className='job__info-lists--label'>REGION:</h3>
                                         <p className='job__info-lists--content'>{this.state.currentJobDetail.region}</p>
