@@ -2,19 +2,20 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import "./Login.scss";
+import "./Register.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import bg from "../../assets/images/login-photo.svg"
 
 
-class Login extends React.Component {
+class Register extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
         
-        axios.post('http://localhost:8080/user', {
+        axios.post('http://localhost:8080/login', {
             // email: email,
             // password: password
         })
@@ -27,8 +28,9 @@ class Login extends React.Component {
     };
 
     render(){   
-        const iconEmail = <FontAwesomeIcon icon={faEnvelope} />
+        const iconPlus = <FontAwesomeIcon icon={faUserPlus} />
         const iconLock = <FontAwesomeIcon icon={faLock} />
+        const iconEmail = <FontAwesomeIcon icon={faEnvelope} />
 
         return(
             <div className="login">
@@ -39,8 +41,17 @@ class Login extends React.Component {
             <div className="login__container">
                 <form className="login-form" onSubmit={this.handleSubmit}>
                     <img alt ="Together logo"src ={logo} className="login-form__img"></img>
-                    <h2 className="login-form__title">JOIN US</h2>
+                    <h2 className="login-form__title">REGISTER TODAY!</h2>
                     <div className="login__box">
+                    <div className="login__box-one">
+                        <div className="input-content">
+                            <div className="input-content__box">
+                                <i className="icon">{iconPlus}</i>
+                                <h5 className="input-content--label">NAME</h5>
+                            </div>
+                            <input type ="string" className="input-content--value" placeholder="First and Last name"></input>
+                        </div>
+                    </div>
                     <div className="login__box-one">
                         <div className="input-content">
                             <div className="input-content__box">
@@ -50,6 +61,7 @@ class Login extends React.Component {
                             <input type ="email" className="input-content--value" placeholder="Email address"></input>
                         </div>
                     </div>
+                    
                     <div className="login__box-two">
                         <div className="input-content">
                             <div className="input-content__box">
@@ -60,7 +72,7 @@ class Login extends React.Component {
                         </div>
                     </div>
                     </div>
-                    <Link to ="/register" href="#" className="input-content--link">REGISTER</Link>
+                    <Link to ="/login" href="#" className="input-content--link">HAVE AN ACCOUNT? LOGIN NOW</Link>
                     <button className="btn" type="submit">SUBMIT</button>
                 </form>
             </div>
@@ -68,5 +80,5 @@ class Login extends React.Component {
     )
     }
 }
-export default Login;
+export default Register;
 

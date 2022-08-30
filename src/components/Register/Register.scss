@@ -1,0 +1,179 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/breakpoints" as *;
+
+* {
+    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    color: $primary-main;
+    height: 1.5rem;
+}
+
+
+.login {
+    &__photo {
+        display: none;
+    }
+
+    &__container{
+        width: 100vw;
+        height: 100vh;
+        background: $primary-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            color:$primary-main;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__box {
+        border-radius: 1.25rem; 
+        padding: 0 0.5rem 1rem 0.5rem;
+        border: 0.1rem solid rgba($primary-main, 0.8)
+    }
+
+    &__box-one, &__box-two{
+        margin-top: 1rem;
+    }
+}
+
+.input-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &__box {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    &--label {
+        font-size: 0.8rem;
+        color: $primary-main;
+    }
+
+    &--value {
+        height: 2rem;
+        width: 80vw;
+        border-radius: 1.25rem;
+        outline: none;
+	    border: 0.1rem solid $primary-main;
+        padding: 1rem;
+        background-color: $primary-white;
+
+        &:active, &:hover {
+            border: 0.3rem solid $hover-accent;
+        }
+    }
+
+    &--link {
+        color: $primary-main;
+        margin-top: 1rem;
+        width: 80vw;
+        text-align: right;
+
+        &:hover{
+            color: $hover-dark;
+            @include textshadow-white;
+        }
+    }
+
+}
+
+.btn {
+    display: block;
+	width: 60%;
+	height: 3rem;
+	border-radius: 1.25rem;
+	outline: none;
+	border: none;
+    background-color: $primary-main;
+	font-size: 1.2rem;
+	color: $primary-white;
+	margin: 1rem 0;
+
+    &:hover {
+        color: $primary-white;
+        background-color: $hover-accent;
+    }
+}
+
+
+
+@include tablet {    
+    .login {
+        display: flex;
+
+        &__photo {
+            display: flex;
+            width: 50vw;
+            height: 100vh;
+            align-items: center;
+            background-color: $secondary-accent;
+            animation: pulse 5s infinite;
+    
+
+            @keyframes pulse {
+                0% {
+                    background-color: $primary-white;
+                }
+                100% {
+                    background-color: $secondary-accent;
+                }
+            }
+            
+            &-together {
+                width: 50vw;
+                height: 50vh;                
+                color: $primary-main;
+                border-radius: 20%;
+            }
+        }
+    
+        &__container{
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
+    .input-content{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    
+        &--value {
+            width: 40vw;
+        }
+    
+        &--link {
+            text-align: right;
+            width: 40vw;
+        }
+    }
+    
+    .btn {
+        display: block;
+        width: 60%;
+        height: 3rem;
+        border-radius: 1.25rem;
+    }
+}
