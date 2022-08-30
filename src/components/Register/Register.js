@@ -56,7 +56,7 @@ class Register extends React.Component {
                         <div className="input-content">
                             <div className="input-content__box">
                                 <i className="icon">{iconEmail}</i>
-                                <h5 className="input-content--label">EMAIL</h5>
+                                <h5 className="input-content--label">EMAIL ADDRESS</h5>
                             </div>
                             <input type ="email" className="input-content--value" placeholder="Email address"></input>
                         </div>
