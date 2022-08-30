@@ -52,7 +52,7 @@ class Register extends React.Component {
                             <input type ="string" className="input-content--value" placeholder="First and Last name"></input>
                         </div>
                     </div>
-                    <div className="login__box-one">
+                    <div className="login__box-two">
                         <div className="input-content">
                             <div className="input-content__box">
                                 <i className="icon">{iconEmail}</i>
