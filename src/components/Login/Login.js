@@ -7,29 +7,58 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import bg from "../../assets/images/login-photo.svg"
+import error from '../../assets/icons/error-24px.svg';
 
 
 class Login extends React.Component {
+    state = {
+        selectedOption: ''
+    };
+
+    validationEmptyFields = () => {
+        let messageError = '';
+
+    if (
+        this.state.email === '',
+        this.state.password === '' 
+    )
+
+    messageError = (
+        <div className="post__form-input-error">
+            <img src={error} alt="error" />
+            <p className="post__form-input-error--message">
+            Please fill in all fields
+            </p>
+        </div>
+        );
+
+        this.setState({ messageError });
+    };
 
     handleSubmit = (e) => {
         e.preventDefault();
         
-        axios.post('http://localhost:8080/user', {
-            // email: email,
-            // password: password
+        console.log(e)
+
+        axios.post('http://localhost:8080/user/login', {
+            email: e.target.email.value,
+            password: e.target.password.value
+     
         })
         .then(res=>{
-            console.log(res);
+            this.props.history.push('/');
         })
         .catch((err) => {
             console.log(err);
         })
+       
     };
 
     render(){   
         const iconEmail = <FontAwesomeIcon icon={faEnvelope} />
         const iconLock = <FontAwesomeIcon icon={faLock} />
 
+  
         return(
             <div className="login">
             <div className="login__photo">
@@ -47,8 +76,9 @@ class Login extends React.Component {
                                 <i className="icon">{iconEmail}</i>
                                 <h5 className="input-content--label">EMAIL</h5>
                             </div>
-                            <input type ="email" className="input-content--value" placeholder="Email address"></input>
+                            <input type ="email" className="input-content--value" placeholder="Email address" name='email'></input>
                         </div>
+                        <div>{this.state.messageError}</div>
                     </div>
                     <div className="login__box-two">
                         <div className="input-content">
@@ -56,12 +86,13 @@ class Login extends React.Component {
                                 <i className="icon">{iconLock}</i>
                                 <h5 className="input-content--label">PASSWORD</h5>
                             </div>
-                            <input type="password" className="input-content--value" placeholder="Password"></input>
+                            <input type="password" className="input-content--value" placeholder="Password" name='password'></input>
                         </div>
+                        <div>{this.state.messageError}</div>
                     </div>
                     </div>
                     <Link to ="/register" href="#" className="input-content--link">REGISTER</Link>
-                    <button className="btn" type="submit">SUBMIT</button>
+                    <button className="btn" type="submit">LOGIN</button>
                 </form>
             </div>
         </div>

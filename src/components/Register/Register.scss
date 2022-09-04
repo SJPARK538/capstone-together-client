@@ -126,17 +126,17 @@
             height: 100vh;
             align-items: center;
             background-color: $secondary-accent;
-            animation: pulse 5s infinite;
-    
+                animation: pulse 5s infinite;
+        
 
-            @keyframes pulse {
-                0% {
-                    background-color: $primary-white;
+                @keyframes pulse {
+                    0% {
+                        background-color: $primary-white;
+                    }
+                    100% {
+                        background-color: $secondary-accent;
+                    }
                 }
-                100% {
-                    background-color: $secondary-accent;
-                }
-            }
             
             &-together {
                 width: 50vw;
