@@ -13,6 +13,7 @@ const toggleMenu = ({ isOpen }) => {
 const BurgerMenu = () => {
   return (
     <Menu noOverlay onStateChange={toggleMenu}>
+                <Link to ="/" className="header__links-item"><div>HOME</div></Link>
                 <Link to ="/about" className="header__links-item"><div>ABOUT</div></Link>
                 <Link to ="/job" className="header__links-item"><div>JOB BOARD</div></Link>
                 <Link to ="/jobs/add" className="header__links-item"><div>JOB POSTING</div></Link>

@@ -1,10 +1,11 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/fonts" as *;
 
 
 * {
-    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    font-family: $font-regular;
     text-decoration: none;
     list-style: none;
     margin: 0;
@@ -12,7 +13,7 @@
 
 .footer {
     background: $primary-white;
-    height: auto;
+    height: 2rem;
     
     &__container {
         margin: 0 1rem;
@@ -30,10 +31,16 @@
 
 @include tablet {
     .footer {
+        position: relative;
+        background: rgba($primary-main,0.8);
+
+        
+
         &__container {
 
             &-content{
                 font-size: 1rem;
+                color: $primary-white;
             }
         }
     }

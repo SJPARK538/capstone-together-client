@@ -1,10 +1,11 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/fonts" as *;
 
 
 * {
-    font-family: "Titillium Web", Verdana, Tahoma, sans-serif;
+    font-family: $font-regular;
     text-decoration: none;
     list-style: none;
     margin: 0;
@@ -22,7 +23,8 @@ video {
 .main {
     margin: 0 auto;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+
     
     &__banner{
         height: 62.5vh;
@@ -51,15 +53,23 @@ video {
     }
 
     &__job {
+        &-photo {
+            display: none;
+        }
         &-content{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            height: 40vh;
+            height: 30vh;
             background-color: rgba($primary-main, 0.8);
 
+            &--title {
+                font-size: 1.2rem;
+                color: $primary-white;
+                
+            }
             &--link {
                 color: $primary-main;
                 font-size: 0.685rem;
@@ -85,6 +95,7 @@ video {
 
 @include tablet {
     .main {
+        height: 98vh;
         &__banner-content {
             
             &--title {
@@ -97,14 +108,51 @@ video {
         }
 
         &__job {
+            height: 36vh;
+
+            &-container{
+                height: 36vh;
+                display: flex;
+                flex-direction: row;
+                
+            
+            }
+
+            &-photo {
+                display: flex;
+                width: 50%;
+                justify-content: center;
+                height: 32vh;
+                background-color: $primary-white;
+         
+
+                &--img {
+                    background: no-repeat url("../../assets/images/money.jpg");
+                    background-size: cover;
+                    width: 85%;
+                    margin: 1rem 0;
+                    height: 100%;
+                    border-radius: 2rem;
+   
+                }
+            }
 
             &-content{
-                flex-direction: row;
                 align-items: center;
+                width: 50%;
+                height: 36vh;
+                background-color: $primary-white;
+
+                &--title {
+                    color: $primary-main;
+                    font-size: 1.5rem;;
+                }
 
                 &--link {
                     width: 40vw;
                     display: flex;
+                    border: solid 1px $primary-main;
+                    font-size: 1rem;
                 }
             }
         }
@@ -114,14 +162,24 @@ video {
 
 @include desktop {
     .main {
+        height: 98vh;
         &__banner-content {
-    
             &--title {
                 font-size: 5rem;
             }
-    
+        
             &--description {
                 font-size: 1.5rem;
+            }
+        }
+
+        &__job {
+            &-photo{
+                &--img{
+                    background-size: cover;
+                    width: 60%;
+
+                }
             }
         }
     }

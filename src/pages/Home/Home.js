@@ -20,20 +20,22 @@ class Home extends React.Component {
               </video>
               <h1 className='main__banner-content--title'>TOGETHER</h1>
               <p className='main__banner-content--description'>Meet your Neighbours, Together</p>
-            
             </div>
           </div>
         </div>
         <div className='main__job'>
           <div className='main__job-container'>
+            <div className='main__job-photo'>
+              <div className='main__job-photo--img'></div>
+            </div>
             <div className='main__job-content'>
+              <div className='main__job-content--title'>SEARCH YOUR JOB TODAY</div>
               <Link to="/job" className='main__job-content--link'><div>JOB BOARD</div></Link>
               <Link to="/jobs/add" className='main__job-content--link'><div>JOB POSTING</div></Link>
             </div>
           </div>
         </div>
       </section>
-    
     <Footer />
     </>
     )

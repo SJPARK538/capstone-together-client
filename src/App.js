@@ -6,6 +6,8 @@ import JobBoard from './components/JobBoard/JobBoard';
 import JobDetail from './components/JobDetail/JobDetail';
 import JobPosting from './components/JobPosting/JobPosting';
 import Register from './components/Register/Register';
+import About from './pages/About/About'
+import MyAccount from './pages/MyAccount/MyAccount';
 
 class App extends React.Component {
   render(){
@@ -22,6 +24,8 @@ class App extends React.Component {
         <Route exact path="/job/:id" component={JobDetail} />
         <Route exact path="/jobs/add" component={JobPosting} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/user/:id" component={MyAccount} />
       </Switch>
     </BrowserRouter>
     )
