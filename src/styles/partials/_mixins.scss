@@ -1,3 +1,6 @@
+@use "./fonts" as *;
+
+
 //for text properties
 @mixin text($size, $line-height) {
     font-size: $size;
@@ -10,4 +13,18 @@
 
 @mixin textshadow-white {
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+@mixin bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@mixin default {
+    font-family: $font-regular;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
 }
