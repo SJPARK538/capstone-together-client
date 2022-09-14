@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import React from 'react';
 import Home from './pages/Home/Home';
 import Login from './components/Login/Login';
@@ -8,6 +8,7 @@ import JobPosting from './components/JobPosting/JobPosting';
 import Register from './components/Register/Register';
 import About from './pages/About/About'
 import MyAccount from './pages/MyAccount/MyAccount';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 
 class App extends React.Component {
   render(){
