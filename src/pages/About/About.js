@@ -17,7 +17,7 @@ class Home extends React.Component {
             <div className='about-section-bg'></div>
             <div className='about-section-1'>
                 <div className='about-section-1--title'>OUR MISSTION</div>
-                <div className='about-section-1--description'>lorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsum
+                <div className='about-section-1--description'>Our mission at this website "TOGETHER" is to deliver a memorable and convinent experience while people are finding their part-time jobs and also finding a person who can help them.
                 </div>
             </div>
             <div className='about-section-2'>
@@ -25,13 +25,13 @@ class Home extends React.Component {
                 <img src={people}  alt='people' className='about-section-2__imagebox--image'></img>
                 </div>
                 <div className='about-section-2__content'>
-                    <div className='about-section-2__content--title'>TOGETHER</div>
-                    <div className='about-section-2__content--description'>orem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumloremorem-ipsumlorem</div>
+                    <div className='about-section-2__content--title'>FIND A PERSON</div>
+                    <div className='about-section-2__content--description'>You can easily find a person who can help your task on this website. Simply post a job with a breif description of a job and your contact information</div>
                 </div>
             </div>
             <div className='about-section-3'>
-                <div className='about-section-3--title'>PROCESS</div>
-                <div className='about-section-3--description'>lorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsumlorem-ipsum
+                <div className='about-section-3--title'>EARN MONEY</div>
+                <div className='about-section-3--description'>You can find a part-time whenver you have a free time around your area !
                 </div>
             </div>
         </div>

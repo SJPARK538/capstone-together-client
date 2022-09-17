@@ -27,7 +27,7 @@ class MyAccount extends React.Component {
     <Header />
       <section className='myaccount'>
         <div>THIS IS My Account Page</div>
-        <div>{this.state.currentAccount.name}</div>
+        {/* <div>{this.state.currentAccount.name}</div> */}
       </section>
     <Footer />
     </>

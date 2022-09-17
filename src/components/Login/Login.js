@@ -9,6 +9,7 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import bg from "../../assets/images/login-photo.svg"
 
 
+
 function Login(){
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -28,7 +29,9 @@ function Login(){
                     if (res.data.err){
                         alert(res.data.err)
                     } else {    
-                        localStorage.setItem("tokenForAccess", res.data.token)
+                        localStorage.setItem("token", res.data.token)
+                        localStorage.setItem("id", JSON.stringify(res.data.id))
+            
                         setLoginState({email: res.data.email, id: res.data.id, status: true})
                         history.push('/')
                         console.log(res.data)
@@ -37,26 +40,8 @@ function Login(){
                 })
                 .catch((err) => {
                     console.log(err)
-                })
-                
-
-
-
-                    // e.preventDefault();
-                    // console.log(e.target)
-            
-                    // axios.post('http://localhost:8080/user/login', {
-                    //     email: e.target.email.value,
-                    //     password: e.target.password.value
-                    // })
-                    // .then(res=>{
-                    //     this.props.history.push('/');
-                    //     // 리스폰스 로컬스토리지에 저장하고 
-                    // })
-                    // .catch((err) => {
-                    //     console.log(err);
-                    // })
-                };
+                })    
+            };
             
         return(
             <div className="login">
