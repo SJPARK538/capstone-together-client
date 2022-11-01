@@ -14,27 +14,31 @@ function Login(){
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [loginState, setLoginState] = useState(false)
-
     const iconEmail = <FontAwesomeIcon icon={faEnvelope} />
     const iconLock = <FontAwesomeIcon icon={faLock} />
     const history = useHistory()
 
+      
         const handleSubmit = (e) => {
              e.preventDefault();
             
             const data = {email: email, password: password};
-            axios
+        axios
                 .post('http://localhost:8080/user/login', data)
                 .then((res) => {
+
                     if (res.data.err){
                         alert(res.data.err)
                     } else {    
-                        localStorage.setItem("token", res.data.token)
+                        localStorage.setItem("token", JSON.stringify(res.data.accessToken))
                         localStorage.setItem("id", JSON.stringify(res.data.id))
-            
                         setLoginState({email: res.data.email, id: res.data.id, status: true})
+                        // console.log(res.data.accessToken)
+                       
+                     
+          
                         history.push('/')
-                        console.log(res.data)
+                        // console.log(res.data)
                         
                     }
                 })
