@@ -15,7 +15,9 @@ class MyAccount extends React.Component {
         axios
         .get(`http://localhost:8080/user/${this.props.match.params.id}`)
         .then (res=> {
-            const currentAccount = res.data;
+          console.log(res.data.data)
+          const currentAccount = res.data;
+          console.log(res.data)
             this.setState({currentAccount})
         })
     }
@@ -27,7 +29,7 @@ class MyAccount extends React.Component {
     <Header />
       <section className='myaccount'>
         <div>THIS IS My Account Page</div>
-        {/* <div>{this.state.currentAccount.name}</div> */}
+        <div>{this.state.currentAccount.name}</div>
       </section>
     <Footer />
     </>

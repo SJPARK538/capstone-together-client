@@ -22,21 +22,20 @@ function Login(){
         const handleSubmit = (e) => {
              e.preventDefault();
             
+             console.log('works!');
             const data = {email: email, password: password};
         axios
                 .post('http://localhost:8080/user/login', data)
                 .then((res) => {
+                    console.log(res.data.data)
 
                     if (res.data.err){
                         alert(res.data.err)
                     } else {    
-                        localStorage.setItem("token", JSON.stringify(res.data.accessToken))
-                        localStorage.setItem("id", JSON.stringify(res.data.id))
-                        setLoginState({email: res.data.email, id: res.data.id, status: true})
-                        // console.log(res.data.accessToken)
-                       
-                     
-          
+                        localStorage.setItem("token", JSON.stringify(res.data.data.accessToken))
+                        localStorage.setItem("id", JSON.stringify(res.data.data.id))
+                        setLoginState({email: res.data.email, id: res.data.data.id, status: true})
+
                         history.push('/')
                         // console.log(res.data)
                         
