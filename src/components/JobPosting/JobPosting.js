@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer';
 import error from '../../assets/icons/error-24px.svg';
 
 
+
 class JobPosting extends React.Component{
     state = {
         selectedOption: ''
@@ -39,7 +40,6 @@ class JobPosting extends React.Component{
             );
         }
     
-
         this.setState({ messageError });
         };
 

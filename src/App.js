@@ -8,7 +8,8 @@ import JobPosting from './components/JobPosting/JobPosting';
 import Register from './components/Register/Register';
 import About from './pages/About/About'
 import MyAccount from './pages/MyAccount/MyAccount';
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+import {BrowserRouter, Route, Navigate, Routes} from 'react-router-dom'
+
 
 class App extends React.Component {
   render(){
@@ -16,18 +17,16 @@ class App extends React.Component {
     
     return(
     <BrowserRouter>
-      <Switch>
-        <Route path="/login" component={Login}></Route>  
-        <Route exact path="/" >
-            {isLoggedIn ? <Home />: <Redirect to="/login" /> }
-        </Route>
-        <Route exact path="/job" component={JobBoard} /> 
-        <Route exact path="/job/:id" component={JobDetail} />
-        <Route exact path="/jobs/add" component={JobPosting} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/user/:id" component={MyAccount} />
-      </Switch>
+      <Routes>
+        <Route exact path="/login" element={<Login />}></Route>  
+        <Route path="/" element={isLoggedIn ? <Home />:<Navigate to="/login" />} ></Route>
+        <Route exact path="/job" element={<JobBoard />} /> 
+        <Route exact path="/job/:id" element={<JobDetail />} />
+        <Route exact path="/jobs/add" element={<JobPosting />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/user/:id" element={<MyAccount />} />
+      </Routes>
     </BrowserRouter>
     )
   }
@@ -35,3 +34,6 @@ class App extends React.Component {
 
 
 export default App;
+
+
+{/* <Route exact path="/" element={isLoggedIn ? <Home /> : <Navigate to ="/login"></Navigate>}> */}
