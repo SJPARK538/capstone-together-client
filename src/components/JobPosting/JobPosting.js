@@ -4,7 +4,7 @@ import './JobPosting.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import error from '../../assets/icons/error-24px.svg';
-
+import { Link, useNavigate} from "react-router-dom";
 
 
 class JobPosting extends React.Component{
