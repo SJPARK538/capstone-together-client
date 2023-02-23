@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Navigate, Routes, useParams} from 'react-router-dom';
+import {BrowserRouter, Route, Navigate, Routes} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './components/Login/Login';
 import JobBoard from './components/JobBoard/JobBoard';

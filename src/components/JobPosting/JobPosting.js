@@ -141,7 +141,7 @@ import axios from 'axios';
 import './JobPosting.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, } from 'react-router-dom';
 import React, { useState } from "react";
 
 const RegionList = ['North York','Markham','Etobicoke','Downtown Toronto','Midtown Toronto','Richmondhill','Vaughan'];
@@ -149,8 +149,6 @@ const PayTypes = ['Flat', 'Hourly'];
 const CategoryList = ['Cleaning','Delivery','Assembling','Tutoring','Helping','Caring','Shopping','Etc'];
 
 const JobPosting = () => {
-    const [messageError, setMessageError] = useState('');
-
     const [titleError, setTitleError] = useState('');
     const [categoryError, setCategoryError] = useState('');
     const [regionError, setRegionError] = useState('');
@@ -163,6 +161,7 @@ const JobPosting = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
+      console.log('handleSubmit called');
       e.preventDefault();
       
       const title = e.target.title?.value;
@@ -183,6 +182,8 @@ const JobPosting = () => {
       setPostDateError(postDate ? '' : 'Please select a posting date');
       setDueDateError(dueDate ? '' : 'Please select a due date');
 
+      console.log(title, category, region, payType, payRate, description, postDate, dueDate);
+
       if (title && category && region && payType && payRate && description && postDate && dueDate) {
       axios
         .post('http://localhost:8080/job', {
@@ -196,7 +197,7 @@ const JobPosting = () => {
           dueDate,
       } )
         .then((res) => {
-          console.log(res);
+          console.log(res)
           navigate('/job');
         })
         .catch((err) => {
@@ -245,7 +246,7 @@ const JobPosting = () => {
                 <div>{regionError}</div>
 
                 <label className='post__form-label'>PAY TYPES</label>
-                <select name='paytype' className='post__form-input'>
+                <select name='payType' className='post__form-input'>
                   {PayTypes.map((paytype, i) => (
                     <option key={i} value={paytype}>
                       {paytype}
