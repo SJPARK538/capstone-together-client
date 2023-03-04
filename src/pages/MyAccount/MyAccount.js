@@ -1,40 +1,34 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import "./MyAccount.scss";
 
+export default function MyAccount() {
+  const [user, setUser] = useState(null);
 
-
-class MyAccount extends React.Component {
-    state = {
-        currentAccount: {},
-    };
-
-    componentDidMount() {
-        axios
-        .get(`http://localhost:8080/user/${this.props.match.params.id}`)
-        .then (res=> {
-          console.log(res.data.data)
-          const currentAccount = res.data;
-          console.log(res.data)
-            this.setState({currentAccount})
+  useEffect(() => {
+    const userLoggedIn = JSON.parse(localStorage.getItem("userLoggedIn"));
+    if (userLoggedIn) {
+      axios
+        .get(`http://localhost:8080/user/${userLoggedIn.id}`)
+        .then((res) => {
+          setUser(res.data);
         })
+        .catch((err) => console.log(err));
     }
+  }, []);
 
-
-  render(){
-    return(
-    <>
-    <Header />
-      <section className='myaccount'>
-        <div>THIS IS My Account Page</div>
-        <div>{this.state.currentAccount.name}</div>
-      </section>
-    <Footer />
-    </>
-    )
+  if (!user) {
+    return <div>Loading...</div>;
   }
-}
 
-export default MyAccount;
+  return (
+    <div>
+      <h1>My Account</h1>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+      <p>Password: {user.password}</p>
+    </div>
+  );
+}
